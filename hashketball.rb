@@ -46,6 +46,7 @@ end
 
 def player_numbers(team)
   numbers = []
+  puts game_hash[:home][:name]
   if game_hash[:home][:name] == team
     puts "checkpoint 1"
     for dude in game_hash[:home][:players] do
