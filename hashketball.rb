@@ -54,4 +54,5 @@ def player_numbers(team)
     for dude in game_hash[:away][:players] do
       numbers << dude[:number]
   end
+  numbers
 end
