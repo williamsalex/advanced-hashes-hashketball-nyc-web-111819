@@ -144,3 +144,21 @@ def winning_team
     return masterList[:away][:team_name]
   end
 end
+
+def player_with_longest_name
+  masterList = game_hash
+  longestName = ""
+  for x in masterList[:home][:players] do
+      if x[:points] > largestShoe[0]
+        largestShoe[0] = x[:points]
+        largestShoe[1] = x[:player_name]
+    end
+  end
+  for x in masterList[:away][:players] do
+      if x[:points] > largestShoe[0]
+        largestShoe[0] = x[:points]
+        largestShoe[1] = x[:player_name]
+    end
+  end
+  return largestShoe[1]
+  
