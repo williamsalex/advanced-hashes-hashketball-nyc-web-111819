@@ -8,7 +8,10 @@ def num_points_scored(name)
   for x in masterList[:home][:players] do
     if x[player_name] == name
       return x[:points]
-  
-  masterList[:home][:players].each{|playerHash| playerHash[:player_name]}.include? playerName do
-    masterList[:home][:players][:player_name].each{|doofus| if doofus == playerName then masterList[:home][:players][:player_name}
-  masterList[]
+    end
+  end
+  for x in masterList[:away][:players] do
+    if x[player_name] == name
+      return x[:points]
+    end
+  end
