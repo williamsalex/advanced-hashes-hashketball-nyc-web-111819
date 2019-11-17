@@ -63,25 +63,25 @@ end
 
 def player_stats(name)
   masterList = game_hash
-  stats = []
+  stats = {}
   for x in masterList[:home][:players] do
     if x[:player_name] == name
-      stats << x[:points]
-      stats << x[:rebounds]
-      stats << x[:assists]
-      stats << x[:steals]
-      stats << x[:blocks]
-      stats << x[:slam_dunks]
+      stats[:points] = x[:points]
+      stats[:rebounds] = x[:rebounds]
+      stats[:assists] = x[:assists]
+      stats[:steals] = x[:steals]
+      stats[:blocks] = x[:blocks]
+      stats[:slam_dunks] = x[:slam_dunks]
     end
   end
   for x in masterList[:away][:players] do
     if x[:player_name] == name
-      stats << x[:points]
-      stats << x[:rebounds]
-      stats << x[:assists]
-      stats << x[:steals]
-      stats << x[:blocks]
-      stats << x[:slam_dunks]
+      stats[:points] = x[:points]
+      stats[:rebounds] = x[:rebounds]
+      stats[:assists] = x[:assists]
+      stats[:steals] = x[:steals]
+      stats[:blocks] = x[:blocks]
+      stats[:slam_dunks] = x[:slam_dunks]
     end
   end
   return stats
