@@ -43,3 +43,15 @@ end
 def team_names
   return [game_hash[:home][:team_name], game_hash[:away][:team_name]]
 end
+
+def player_numbers(team)
+  numbers = []
+  if game_hash[:home][:name] == team
+    for dude in game_hash[:home][:players] do
+      numbers << dude[:number]
+  end
+  if game_hash[:away][:name] == team
+    for dude in game_hash[:away][:players] do
+      numbers << dude[:number]
+  end
+end
