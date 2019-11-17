@@ -95,13 +95,13 @@ def big_shoe_rebounds
   masterList = game_hash
   largestShoe = [0, "hi"]
   for x in masterList[:home][:players] do
-      if x[:shoe] > largestShoe
+      if x[:shoe] > largestShoe[0]
         largestShoe[0] = x[:shoe]
         largestShoe[1] = x[:rebounds]
     end
   end
   for x in masterList[:away][:players] do
-      if x[:shoe] > largestShoe
+      if x[:shoe] > largestShoe[0]
         largestShoe[0] = x[:shoe]
         largestShoe[1] = x[:rebounds]
     end
