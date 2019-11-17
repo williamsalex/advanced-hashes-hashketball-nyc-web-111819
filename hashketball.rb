@@ -20,12 +20,12 @@ def shoe_size(name)
   masterList = game_hash
   for x in masterList[:home][:players] do
     if x[:player_name] == name
-      return x[:shoe_size]
+      return x[:shoe]
     end
   end
   for x in masterList[:away][:players] do
     if x[:player_name] == name
-      return x[:shoe_size]
+      return x[:shoe]
     end
   end
 end
