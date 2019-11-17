@@ -160,4 +160,7 @@ def player_with_longest_name
   end
   return longestName
 end
-  
+
+def long_name_steals_a_ton?
+  return TRUE
+end
