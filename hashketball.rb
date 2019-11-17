@@ -33,6 +33,7 @@ end
 def team_colors(name)
   masterList = game_hash
   for x in masterList do
+    puts x
     if x[:team_name] == name
       return x[:colors]
     end
