@@ -59,6 +59,3 @@ def player_numbers(team)
   end
   numbers
 end
-
-def player_numbers
-end
