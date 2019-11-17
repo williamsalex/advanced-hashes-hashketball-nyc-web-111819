@@ -59,3 +59,19 @@ def player_numbers(team)
   end
   numbers
 end
+
+
+def player_stats(name)
+  masterList = game_hash
+  stats = []
+  for x in masterList[:home][:players] do
+    if x[:player_name] == name
+      stats << 
+    end
+  end
+  for x in masterList[:away][:players] do
+    if x[:player_name] == name
+      return x[:shoe]
+    end
+  end
+end
