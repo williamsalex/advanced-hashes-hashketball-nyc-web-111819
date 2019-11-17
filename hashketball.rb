@@ -66,6 +66,7 @@ def player_stats(name)
   stats = {}
   for x in masterList[:home][:players] do
     if x[:player_name] == name
+      stats[:shoe] = x[:shoe]
       stats[:number] = x[:number]
       stats[:points] = x[:points]
       stats[:rebounds] = x[:rebounds]
@@ -77,6 +78,7 @@ def player_stats(name)
   end
   for x in masterList[:away][:players] do
     if x[:player_name] == name
+      stats[:shoe] = x[:shoe]
       stats[:number] = x[:number]
       stats[:points] = x[:points]
       stats[:rebounds] = x[:rebounds]
