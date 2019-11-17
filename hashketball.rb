@@ -32,10 +32,10 @@ end
 
 def team_colors(name)
   masterList = game_hash
-  if masterList[:home][:team_name] == name do
+  if masterList[:home][:team_name] == name
     return masterList[:home][:colors]
   end
-  if masterList[:away][:team_name] == name do
+  if masterList[:away][:team_name] == name
     return masterList[:away][:colors]
   end
 end
