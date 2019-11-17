@@ -49,10 +49,12 @@ def player_numbers(team)
   if game_hash[:home][:name] == team
     for dude in game_hash[:home][:players] do
       numbers << dude[:number]
+    end
   end
   if game_hash[:away][:name] == team
     for dude in game_hash[:away][:players] do
       numbers << dude[:number]
+    end
   end
   numbers
 end
