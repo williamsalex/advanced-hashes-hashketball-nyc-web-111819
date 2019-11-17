@@ -92,5 +92,19 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
-  
+  masterList = game_hash
+  largestShoe = [0, "hi"]
+  for x in masterList[:home][:players] do
+      if x[:shoe] > largestShoe
+        largestShoe[0] = x[:shoe]
+        largestShoe[1] = x[:rebounds]
+    end
+  end
+  for x in masterList[:away][:players] do
+      if x[:shoe] > largestShoe
+        largestShoe[0] = x[:shoe]
+        largestShoe[1] = x[:rebounds]
+    end
+  end
+  return largestShoe[1]
 end
