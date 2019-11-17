@@ -5,5 +5,5 @@ end
 def num_points_scored(playerName)
   masterList = game_hash
   masterList[:home][:players].each{|playerHash| playerHash[:player_name]}.include? playerName do
-    masterList[:home][:players][]
+    masterList[:home][:players][:player_name].each{|doofus| doofus == playerName}
   masterList[]
