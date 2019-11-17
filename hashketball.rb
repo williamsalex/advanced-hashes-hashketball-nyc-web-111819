@@ -66,12 +66,23 @@ def player_stats(name)
   stats = []
   for x in masterList[:home][:players] do
     if x[:player_name] == name
-      stats << 
+      stats << x[:points]
+      stats << x[:rebounds]
+      stats << x[:assists]
+      stats << x[:steals]
+      stats << x[:blocks]
+      stats << x[:slam_dunks]
     end
   end
   for x in masterList[:away][:players] do
     if x[:player_name] == name
-      return x[:shoe]
+      stats << x[:points]
+      stats << x[:rebounds]
+      stats << x[:assists]
+      stats << x[:steals]
+      stats << x[:blocks]
+      stats << x[:slam_dunks]
     end
   end
+  return stats
 end
