@@ -6,13 +6,26 @@ def num_points_scored(name)
   masterList = game_hash
   for x in masterList[:home][:players] do
     if x[:player_name] == name
-      puts x[:points]
       return x[:points]
     end
   end
   for x in masterList[:away][:players] do
     if x[:player_name] == name
       return x[:points]
+    end
+  end
+end
+
+def shoe_size(name)
+  masterList = game_hash
+  for x in masterList[:home][:players] do
+    if x[:player_name] == name
+      return x[:shoe_size]
+    end
+  end
+  for x in masterList[:away][:players] do
+    if x[:player_name] == name
+      return x[:shoe_size]
     end
   end
 end
