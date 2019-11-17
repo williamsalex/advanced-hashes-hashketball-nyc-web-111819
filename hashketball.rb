@@ -5,8 +5,8 @@ end
 def num_points_scored(name)
   masterList = game_hash
   for x in masterList[:home][:players] do
-    puts x[:player_name]
     if x[:player_name] == name
+      puts x[:points]
       return x[:points]
     end
   end
