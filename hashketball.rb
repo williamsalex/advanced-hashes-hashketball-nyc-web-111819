@@ -119,7 +119,7 @@ def most_points_scored
     end
   end
   for x in masterList[:away][:players] do
-      if x[:shoe] > largestShoe[0]
+      if x[:points] > largestShoe[0]
         largestShoe[0] = x[:points]
         largestShoe[1] = x[:player_name]
     end
