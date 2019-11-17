@@ -159,4 +159,5 @@ def player_with_longest_name
     end
   end
   return longestName
+end
   
