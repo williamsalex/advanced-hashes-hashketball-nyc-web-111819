@@ -137,5 +137,10 @@ def winning_team
   for x in masterList[:away][:players] do
     awayScore = awayScore + x[:points]
   end
-  return homeScore
+  if homeScore > awayScore
+    return masterList[:home][:team_name]
+  end
+  if awayScore > homeScore
+    return masterList[:away][:team_name]
+  end
 end
