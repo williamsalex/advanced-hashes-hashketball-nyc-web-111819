@@ -149,7 +149,7 @@ def player_with_longest_name
   masterList = game_hash
   longestName = ""
   for x in masterList[:home][:players] do
-      if x[:points] > largestShoe[0]
+      if x[:name] > largestShoe[0]
         largestShoe[0] = x[:points]
         largestShoe[1] = x[:player_name]
     end
