@@ -45,11 +45,12 @@ def team_names
 end
 
 def player_numbers(team)
+  hash = game_hash
   numbers = []
-  puts game_hash[:home][:name]
-  if game_hash[:home][:name] == team
+  puts hash[:home][:name]
+  if hash[:home][:name] == team
     puts "checkpoint 1"
-    for dude in game_hash[:home][:players] do
+    for dude in hash[:home][:players] do
       puts "checkpoint 2"
       numbers << dude[:number]
     end
