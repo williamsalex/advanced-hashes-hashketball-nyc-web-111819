@@ -108,3 +108,21 @@ def big_shoe_rebounds
   end
   return largestShoe[1]
 end
+
+def most_points_scored
+  masterList = game_hash
+  largestShoe = [0, "hi"]
+  for x in masterList[:home][:players] do
+      if x[:points] > largestShoe[0]
+        largestShoe[0] = x[:points]
+        largestShoe[1] = x[:player_name]
+    end
+  end
+  for x in masterList[:away][:players] do
+      if x[:shoe] > largestShoe[0]
+        largestShoe[0] = x[:points]
+        largestShoe[1] = x[:player_name]
+    end
+  end
+  return largestShoe[1]
+end
