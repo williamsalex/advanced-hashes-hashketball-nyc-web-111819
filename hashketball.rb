@@ -149,12 +149,12 @@ def player_with_longest_name
   masterList = game_hash
   longestName = "hello"
   for x in masterList[:home][:players] do
-      if x[:player_name].length > longestName.length
+    if x[:player_name].length > longestName.length
         longestName = x[:name]
     end
   end
   for x in masterList[:away][:players] do
-      if x[:player_name].length > longestName.length
+    if x[:player_name].length > longestName.length
         longestName = x[:name]
     end
   end
