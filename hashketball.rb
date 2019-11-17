@@ -126,3 +126,16 @@ def most_points_scored
   end
   return largestShoe[1]
 end
+
+def winning_team
+  masterList = game_hash
+  homeScore = 0
+  awayScore = 0
+  for x in masterList[:home][:players] do
+    homeScore = homeScore + x[:points]
+  end
+  for x in masterList[:away][:players] do
+    awayScore = awayScore + x[:points]
+  end
+  
+end
